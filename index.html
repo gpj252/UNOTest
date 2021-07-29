@@ -1,83 +1,112 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <link rel="stylesheet" href="style.css"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/png" href="pngs/icon.png">
 </head>
+
 <body>
+  <div id="carouselIndicators" class="carousel slide">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselIndicators" data-slide-to="2"></li>
+      <li data-target="#carouselIndicators" data-slide-to="3"></li>
+      <li data-target="#carouselIndicators" data-slide-to="4"></li>
+    </ol>
+    <div class="carousel-inner sec1-wrap">
+      <div class="carousel-item active">
+        <img src="svgs/agerating.svg" alt="Faixa Etaria" class="ageratingsvg" id="ageratingid" />
+        <img src="svgs/players.svg" alt="# Jogadores" class="playerssvg" id="playersid" />
+        <img src="svgs/logo.svg" alt="uno" class="symbolsvg" id="symbolid" />
+        <img src="svgs/uno.svg" alt="uno" class="logosvg" id="logoid" />
+      </div>
+      <div class="carousel-item sec2-wrap">
+        <p class="instructions" id="instructions1id">O baralho é composto por cartas de quatro cores: verde, amarelo,
+          vermelho e azul. As cartas de cada cor variam entre 0 e 9. Alem das cartas numeradas existem três ações
+          especiais para cada cor, elas são "pular", "comprar duas" e "inverter". Há também duas cartas de ações
+          especiais com fundo preto, "Coringa" e "Coringa comprar quatro". Das cartas coloridas, existem duas de cada
+          ação e de cada numero, com exceção do 0, que só tem um de cada cor. Há quatro "coringas que mudam de cor" e
+          quatro "coringas comprar quatro", o que resulta num total de 108 cartas no baralho.
+          <br/>
+          <img src="svgs/colorcardback.svg" alt="Carta Cor" class="colorcardbacksvg" id="colorcardbackid" />
+          <img src="svgs/colorcard0.svg" alt="Carta Cor" class="colorcard1svg" id="colorcard0id" />
+          <img src="svgs/colorcard1.svg" alt="Carta Cor" class="colorcard2svg" id="colorcard1id" />
+          <img src="svgs/colorcard2.svg" alt="Carta Cor" class="colorcard3svg" id="colorcard2id" />
+          <img src="svgs/colorcard3.svg" alt="Carta Cor" class="colorcard4svg" id="colorcard3id" />
+          <img src="svgs/+4card.svg" alt="Carta especial" class="specialcard1svg" id="specialcard1id" />
+          <img src="svgs/colorswapcard.svg" alt="Carta especial" class="specialcard2svg" id="specialcard2id" />
+          <img src="svgs/cardtypes.svg" alt="tipos de carta" class="cardtypessvg" id="cardtypesid" />
+        </p>
+      </div>
+      <div class="carousel-item sec3-wrap">
+        <p class="instructions" id="instructions2id">No inicio do jogo são distribuídas sete cartas a cada jogador, a
+          carta do topo do baralho é virada para cima, sendo esta a primeira carta em jogo. Caso essa carta possua uma
+          "habilidade especial" (nomeadamente pular, comprar duas ou inverter), ela é tratada como se o jogador que deu
+          as cartas tivesse a jogado. Se a carta for um coringa o jogador escolhe a cor que deve começar. Se for um
+          coringa comprar quatro, deve ser devolvida ao baralho. O jogo começa com a pessoa posicionada ao sentido
+          horário de quem distribuiu as cartas.<br />
+          <img src="svgs/examplecardback.svg" alt="Carta" class="cardstack0" id="cardstack0id" />
+          <img src="svgs/examplecardback.svg" alt="Carta" class="cardstack1" id="cardstack1id" />
+          <img src="svgs/examplecardback.svg" alt="Carta" class="cardstack2" id="cardstack2id" />
+          <img src="svgs/examplecardback.svg" alt="Carta" class="cardstack3" id="cardstack3id" />
+          <img src="svgs/examplecardback.svg" alt="Carta" class="cardstack4" id="cardstack4id" />
+          <img src="svgs/examplecardback.svg" alt="Carta" class="cardstack5" id="cardstack5id" />
+          <img src="svgs/examplecardback.svg" alt="Carta" class="cardstack6" id="cardstack6id" />
+          <img src="svgs/examplecardback.svg" alt="Carta" class="cardstack7" id="cardstack7id" />
+          <img src="svgs/examplecard.svg" alt="Carta" class="cardstack8" id="cardstack8id" />
+        </p>
+      </div>
+      <div class="carousel-item sec4-wrap">
+        <p class="instructions" id="instructions3id">A cada rodada o jogador pode jogar uma carta de sua mão que seja
+          igual à cor, número ou simbolo ao da carta na mesa, sendo que se tiver mais de uma carta identica a da
+          mesa(cor e número) pode jogá-las juntas. O jogador pode optar ao inves disso por jogar um coringa ou coringa
+          comprar quatro. Se a pessoa não possuir carta para jogar na ocasião, deve comprar e, caso ainda continue sem
+          uma carta jogavel, precisa continuar a comprar, repetindo o processo até sair uma carta jogável. Se a pessoa
+          tiver uma sequência numérica de mesma cor, pode jogar todas. Depois de um jogador jogar a sua carta, o próximo
+          de acordo com os entido da mesa deve jogar. As cartas podem ser jogadas na sequência (crescente ou
+          decrescente) dos números, caso possuam a mesma cor.
+        </p>
+      </div>
+      <div class="carousel-item sec5-wrap">
+        <p class="instructions" id="instructions4id">
+          Se o baralho esgotar, as cartas jogadas na mesa são embaralhadas novamente e colocadas como novo baralho. O
+          jogo termina quando um jogador está sem nenhuma carta na mão. O jogador só pode vencer com cartas comuns, ou
+          seja, caso só tenha uma carta e ela for especial é necessário jogar a mesma e comprar uma comum. Lembrando que
+          para vencer o jogo tem que restar na mão uma carta apenas e o jogador deve avisar todos dizendo uno. Não se
+          pode esvaziar todas as cartas da mão de uma vez só. Caso alguém esvazie as cartas da mão de uma vez só ou
+          esqueça de dizer uno, o jogador deve comprar mais cinco cartas.
+          <br />
+          <img src="svgs/uno.svg" alt="uno2" class="logo2svg" id="logo2id" />
+        </p>
 
-  <div class="container">
-    <div class="wrapper">
-
-      <button class="page-btn page-back" id="page-back">
-        <img src="pngs/button.png" alt="pagina anterior"/>
-      </button>
-      <button class="page-btn page-next">
-        <img src="pngs/button.png" alt="proxima pagina"/>
-      </button>
-
-      <section class="section-1">
-        <div class="sec-wrap sec1-wrap">
-
-          <img src="svgs/agerating.svg" alt="Faixa Etaria" class="ageratingsvg" id="ageratingid"/>
-          <img src="svgs/players.svg" alt="# Jogadores" class="playerssvg" id="playersid" />
-          <img src="svgs/logo.svg" alt="uno" class="symbolsvg" id="symbolid"/>
-          <img src="svgs/uno.svg" alt="uno" class="logosvg" id="logoid"/>
-
-        </div>
-      </section>
-      <section class="section-2">
-        <div class="sec-wrap sec2-wrap">
-
-            <img src="svgs/colorcardback.svg" alt="Carta Cor" class="colorcardbacksvg" id="colorcardbackid"/>
-            <img src="svgs/colorcard0.svg" alt="Carta Cor" class="colorcard1svg" id="colorcard0id"/>
-            <img src="svgs/colorcard1.svg" alt="Carta Cor" class="colorcard2svg" id="colorcard1id"/>
-            <img src="svgs/colorcard2.svg" alt="Carta Cor" class="colorcard3svg" id="colorcard2id"/>
-            <img src="svgs/colorcard3.svg" alt="Carta Cor" class="colorcard4svg" id="colorcard3id"/>
-
-            <img src="svgs/+4card.svg" alt="Carta especial" class="specialcard1svg" id="specialcard1id"/>
-            <img src="svgs/colorswapcard.svg" alt="Carta especial" class="specialcard2svg" id="specialcard2id"/>
-
-            <img src="svgs/cardtypes.svg" alt="tipos de carta" class="cardtypessvg" id="cardtypesid"/>
-
-            <p class="instructions" id="instructions1id">O baralho é composto por cartas de quatro cores: verde, amarelo, vermelho e azul. As cartas de cada cor variam entre 0 e 9. Alem das cartas numeradas existem três ações especiais para cada cor, elas são "pular", "comprar duas" e "inverter". Há também duas cartas de ações especiais com fundo preto, "Coringa" e "Coringa comprar quatro". Das cartas coloridas, existem duas de cada ação e de cada numero, com exceção do 0, que só tem um de cada cor. Há quatro "coringas que mudam de cor" e quatro "coringas comprar quatro", o que resulta num total de 108 cartas no baralho.</p>
-        </div>
-      </section>
-      <section class="section-3">
-        <div class="sec-wrap sec3-wrap"></div>
-          <img src="svgs/examplecardback.svg" alt="Carta" class="cardstack0" id="cardstack0id"/>
-          <img src="svgs/examplecardback.svg" alt="Carta" class="cardstack1" id="cardstack1id"/>
-          <img src="svgs/examplecardback.svg" alt="Carta" class="cardstack2" id="cardstack2id"/>
-          <img src="svgs/examplecardback.svg" alt="Carta" class="cardstack3" id="cardstack3id"/>
-          <img src="svgs/examplecardback.svg" alt="Carta" class="cardstack4" id="cardstack4id"/>
-          <img src="svgs/examplecardback.svg" alt="Carta" class="cardstack5" id="cardstack5id"/>
-          <img src="svgs/examplecardback.svg" alt="Carta" class="cardstack6" id="cardstack6id"/>
-          <img src="svgs/examplecardback.svg" alt="Carta" class="cardstack7" id="cardstack7id"/>
-          <img src="svgs/examplecard.svg" alt="Carta" class="cardstack8" id="cardstack8id"/>
-          <p class="instructions" id="instructions2id">No inicio do jogo são distribuídas sete cartas a cada jogador, a carta do topo do baralho é virada para cima, sendo esta a primeira carta em jogo. Caso essa carta possua uma "habilidade especial" (nomeadamente pular, comprar duas ou inverter), ela é tratada como se o jogador que deu as cartas tivesse a jogado. Se a carta for um coringa o jogador escolhe a cor que deve começar. Se for um coringa comprar quatro, deve ser devolvida ao baralho. O jogo começa com a pessoa posicionada ao sentido horário de quem distribuiu as cartas.</p>
-
-      </section>
-      <section class="section-4">
-        <div class="sec-wrap sec4-wrap">
-          <p class="instructions" id="instructions3id">A cada rodada o jogador pode jogar uma carta de sua mão que seja igual à cor, número ou simbolo ao da carta na mesa, sendo que se tiver mais de uma carta identica a da mesa(cor e número) pode jogá-las juntas. O jogador pode optar ao inves disso por jogar um coringa ou coringa comprar quatro. Se a pessoa não possuir carta para jogar na ocasião, deve comprar e, caso ainda continue sem uma carta jogavel, precisa continuar a comprar, repetindo o processo até sair uma carta jogável. Se a pessoa tiver uma sequência numérica de mesma cor, pode jogar todas. Depois de um jogador jogar a sua carta, o próximo de acordo com os entido da mesa deve jogar. As cartas podem ser jogadas na sequência (crescente ou decrescente) dos números, caso possuam a mesma cor.
-</p>
-        </div>
-      </section>
-      <section class="section-5">
-        <div class="sec-wrap sec5-wrap">
-
-          <p class="instructions" id="instructions4id">Se o baralho esgotar, as cartas jogadas na mesa são embaralhadas novamente e colocadas como novo baralho. O jogo termina quando um jogador está sem nenhuma carta na mão. O jogador só pode vencer com cartas comuns, ou seja, caso só tenha uma carta e ela for especial é necessário jogar a mesma e comprar uma comum. Lembrando que para vencer o jogo tem que restar na mão uma carta apenas e o jogador deve avisar todos dizendo uno. Não se pode esvaziar todas as cartas da mão de uma vez só. Caso alguém esvazie as cartas da mão de uma vez só ou esqueça de dizer uno, o jogador deve comprar mais cinco cartas.</p>
-          <img src="svgs/uno.svg" alt="uno2" class="logo2svg" id="logo2id"/>
-
-        </div>
-      </section>
+      </div>
     </div>
+    <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
   </div>
 </body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+  integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+  integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <script src='script.js'></script>
+
 </html>
